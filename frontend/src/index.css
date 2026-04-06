@@ -1,48 +1,181 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: #f5f5f5;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background: #0a0a0f;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
+}
+
+/* Карточки */
+.card {
+  background: #1e1e2a;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #3a2c4a;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(106, 13, 173, 0.3);
+  border-color: #7b2cbf;
 }
 .card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-button {
-  background-color: #1976d2;
+
+.card .actions {
+  margin-top: auto;
+}
+
+/* Кнопки */
+button, .button {
+  background: linear-gradient(135deg, #6a0dad, #9b4dff);
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
+
+button:hover, .button:hover {
+  background: linear-gradient(135deg, #7b1fa2, #b47cff);
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(106, 13, 173, 0.4);
+}
+
 button.danger {
-  background-color: #dc3545;
+  background: linear-gradient(135deg, #8b0000, #c0392b);
 }
+
+button.danger:hover {
+  background: linear-gradient(135deg, #a00000, #e05a4a);
+}
+
+/* Ссылки */
+a {
+  color: #c084fc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #e9a8ff;
+  text-decoration: underline;
+}
+
+/* Навигация */
+nav {
+  background: #0f0f17;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #3a2c4a;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav a {
+  color: #d4c4ff;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+nav a:hover {
+  color: #ba8cff;
+}
+
+nav button {
+  background: none;
+  border: 1px solid #9b4dff;
+  color: #c084fc;
+  padding: 6px 14px;
+  box-shadow: none;
+}
+
+nav button:hover {
+  background: #9b4dff20;
+  transform: none;
+}
+
+/* Формы */
 input, textarea, select {
   width: 100%;
-  padding: 8px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  margin: 8px 0 16px;
+  background: #2a2a35;
+  border: 1px solid #4a3b5a;
+  border-radius: 12px;
+  color: #f0f0f0;
+  font-size: 1rem;
+  transition: border 0.2s;
 }
-nav {
-  background: #282c34;
-  padding: 1rem;
-  color: white;
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #9b4dff;
+  box-shadow: 0 0 0 2px #6a0dad40;
 }
-nav a {
-  color: white;
-  margin-right: 1rem;
-  text-decoration: none;
+
+label {
+  font-weight: 500;
+  color: #c9b6ff;
 }
-nav a.active {
-  font-weight: bold;
+
+/* Таблицы (для списка пользователей) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e1e2a;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #2e2e3e;
+}
+
+th {
+  background: #2a1e3a;
+  color: #d4b6ff;
+}
+
+tr:hover {
+  background: #2a2a36;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+  color: #e5caff;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-left: 6px solid #9b4dff;
+  padding-left: 1rem;
 }

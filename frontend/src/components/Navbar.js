@@ -23,7 +23,7 @@ function Navbar() {
           <Link to="/register">Регистрация</Link>
         </>
       ) : (
-        <button onClick={handleLogout} style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer' }}>Выйти</button>
+        <button onClick={handleLogout} style={{ marginLeft: 'auto' }}>Выйти</button>
       )}
     </nav>
   );

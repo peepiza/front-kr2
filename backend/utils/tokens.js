@@ -42,11 +42,44 @@ async function initAdminUser() {
   }
 }
 
+function initProducts() {
+  if (products.length === 0) {
+    products.push(
+      {
+        id: '1',
+        title: 'Кукла Monster High Дракулаура',
+        category: 'Куклы',
+        description: 'Дракулаура – дочь графа Дракулы. Стильная, с розовыми и чёрными волосами. В комплекте: кукла, одежда, аксессуары.',
+        price: 2990,
+        imageUrl: '/images/1.png'
+      },
+      {
+        id: '2',
+        title: 'Кукла Monster High Фрэнки Штейн',
+        category: 'Куклы',
+        description: 'Фрэнки – дочь Франкенштейна. Яркие чёрно-белые волосы, зелёная кожа, стильные аксессуары.',
+        price: 3190,
+        imageUrl: '/images/2.png'
+      },
+      {
+        id: '3',
+        title: 'Кукла Monster High Клодин Вульф',
+        category: 'Куклы',
+        description: 'Клодин – дочь оборотня. Пушистые ушки, синие волосы, модный образ.',
+        price: 2890,
+        imageUrl: '/images/3.png'
+      }
+    );
+    console.log('3 example products added');
+  }
+}
+
 module.exports = {
   users,
   products,
   refreshTokens,
   generateAccessToken,
   generateRefreshToken,
-  initAdminUser
+  initAdminUser,
+  initProducts   
 };
